@@ -4,4 +4,3 @@ def test_product_init(product1):
     assert product1.price == 180000.0
     assert product1.quantity == 5
 
-
