@@ -21,3 +21,17 @@ def product3():
 @pytest.fixture
 def product4():
     return Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
+
+
+@pytest.fixture
+def category1():
+    return Category("Смартфоны",
+                         "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+                         [product1, product2, product3])
+
+
+@pytest.fixture
+def category2():
+    return Category("Телевизоры",
+                         "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
+                         [product4])
