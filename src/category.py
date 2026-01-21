@@ -18,6 +18,7 @@ class Category:
 
     @property
     def products(self):
-        return self.__products
+        for product in self.__products:
+            return f'{product.name}, {product.price} руб. Остаток: '
 
 
