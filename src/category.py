@@ -13,7 +13,7 @@ class Category:
         Category.product_count = len(self.__products)
 
     def add_product(self, product):
-        if product not in self.__products and product.name not in self.__products.na:
+        if product not in self.__products:
             self.__products.append(product)
         Category.product_count += 1
 
