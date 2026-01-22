@@ -12,7 +12,12 @@ class Product:
 
     @classmethod
     def new_product(cls, product_dict):
-        return cls(name=product_dict['name'], description=product_dict['description'], price=product_dict['price'], quantity=product_dict['quantity'])
+        return cls(
+            name=product_dict["name"],
+            description=product_dict["description"],
+            price=product_dict["price"],
+            quantity=product_dict["quantity"],
+        )
 
     @property
     def price(self):
@@ -23,4 +28,4 @@ class Product:
         if new_price > 0:
             self.__price = new_price
         else:
-            print('Цена не должна быть нулевая или отрицательная')
+            print("Цена не должна быть нулевая или отрицательная")
