@@ -13,12 +13,15 @@ class Category:
         Category.product_count = len(self.__products)
 
     def add_product(self, product):
-        self.__products.append(product)
+        if product not in self.__products and product.name not in self.__products.na:
+            self.__products.append(product)
         Category.product_count += 1
 
     @property
     def products(self):
+        result = ""
         for product in self.__products:
-            return f'{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n'
+            result += f'\n{product.name}, {product.price} руб. Остаток: {product.quantity} шт.'
+        return result
 
 
