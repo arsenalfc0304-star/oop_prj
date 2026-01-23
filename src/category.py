@@ -24,7 +24,6 @@ class Category:
             result += f"\n{product.name}, {product.price} руб. Остаток: {product.quantity} шт."
         return result
 
-
     def __str__(self):
         products_sum = 0
         for product in self.__products:
