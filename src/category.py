@@ -23,3 +23,7 @@ class Category:
         for product in self.__products:
             result += f"\n{product.name}, {product.price} руб. Остаток: {product.quantity} шт."
         return result
+
+
+    def __str__(self):
+        return f"{self.name}, количество продуктов: {len(self.__products)} шт."
