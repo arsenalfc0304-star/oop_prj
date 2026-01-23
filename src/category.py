@@ -27,7 +27,6 @@ class Category:
 
     def __str__(self):
         products_sum = 0
-        for product in self.products:
+        for product in self.__products:
             products_sum += product.quantity
-
         return f"{self.name}, количество продуктов: {products_sum} шт."
