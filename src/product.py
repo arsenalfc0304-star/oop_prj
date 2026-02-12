@@ -34,11 +34,10 @@ class Product:
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
 
     def __add__(self, other):
-        if type(other) == type(self):
+        if type(other) is type(self):
             return (self.price * self.quantity) + (other.price * other.quantity)
         else:
             raise TypeError
-
 
 
 class Smartphone(Product):
@@ -48,6 +47,7 @@ class Smartphone(Product):
         self.model = model
         self.memory = memory
         self.color = color
+
 
 class LawnGrass(Product):
     def __init__(self, name, description, price, quantity, country, germination_period, color):
