@@ -24,6 +24,11 @@ def product_4():
 
 
 @pytest.fixture
+def product_6():
+    return "Not a product"
+
+
+@pytest.fixture
 def product_5():
     return Product("65\" OLED 4K", "Фоновая подсветка", 223000.0, 2)
 
