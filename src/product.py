@@ -7,7 +7,7 @@ class BaseProduct(ABC):
         pass
 
     @abstractmethod
-    def new_product(cls):
+    def new_product(self):
         pass
 
     @abstractmethod
@@ -32,7 +32,7 @@ class PrintMixin:
         return f"{self.__class__.__name__}({self.name}, {self.description}, {self.price}, {self.quantity})"
 
 
-class Product(BaseProduct, PrintMixin):
+class Product(PrintMixin, BaseProduct):
     name: str
     description: str
     price: float
