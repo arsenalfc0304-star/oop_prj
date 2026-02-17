@@ -7,7 +7,7 @@ class BaseProduct(ABC):
         pass
 
     @abstractmethod
-    def new_product(self):
+    def new_product(cls):
         pass
 
     @abstractmethod
