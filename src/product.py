@@ -1,38 +1,36 @@
 from abc import ABC, abstractmethod
 
+
 class BaseProduct(ABC):
     @abstractmethod
     def __init__(self):
         pass
 
-
     @abstractmethod
     def new_product(self):
         pass
-
 
     @abstractmethod
     def price(self):
         pass
 
-
     @abstractmethod
     def __str__(self):
         pass
 
-
     @abstractmethod
     def __add__(self):
         pass
+
 
 class PrintMixin:
 
     def __init__(self):
         print(repr(self))
 
-
     def __repr__(self):
         return f"{self.__class__.__name__}({self.name}, {self.description}, {self.price}, {self.quantity})"
+
 
 class Product(BaseProduct, PrintMixin):
     name: str
