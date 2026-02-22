@@ -10,7 +10,7 @@ def test_product_init(product_1):
     assert product_1.quantity == 5
 
 
-def test_new_product():
+def test_new_product(capsys):
     new_product = Product.new_product(
         {"name": "Samsung Galaxy S23 Ultra", "description": "256GB, Серый цвет, 200MP камера", "price": 180000.0,
          "quantity": 5})
@@ -18,7 +18,7 @@ def test_new_product():
     assert new_product.description == "256GB, Серый цвет, 200MP камера"
     assert new_product.price == 180000.0
     assert new_product.quantity == 5
-
+    assert capsys.readouterr().out == 'Product(Samsung Galaxy S23 Ultra, 256GB, Серый цвет, 200MP камера, 180000.0, 5)\n'
 
 def test_product_price_setter(product_1):
     assert product_1.price == 180000.0
