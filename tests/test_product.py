@@ -39,3 +39,8 @@ def test_product_add(product_1, product_2):
 def test_product_add_incorrect(product_7, product_8):
     with pytest.raises(TypeError):
         product_7 + product_8
+
+
+def test_create_zero_quantity_product():
+    with pytest.raises(ValueError, match='Товар с нулевым количеством не может быть добавлен'):
+        Product("Бракованный товар", "Неверное количество", 1000.0, 0)
