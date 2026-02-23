@@ -25,3 +25,7 @@ def test_category_str(category_1):
 def test_category_add_not_product(category_1, product_6):
     with pytest.raises(TypeError):
         category_1.add_product(product_6)
+
+
+def test_category_empty_middle_price(category_3):
+        assert category_3.middle_price() == 0
